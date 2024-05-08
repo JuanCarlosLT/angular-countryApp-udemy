@@ -1,0 +1,18 @@
+<h2>Por Capital</h2>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!--searchBox (onValue)="seacrhByCapital($event)"-->
+    <shared-search-box placeholder="Buscar por capital" (onDebounce)="seacrhByCapital($event)"
+      [initialValue]="initialValue"></shared-search-box>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <hr>
+    <shared-loading-spiner *ngIf="isLoading"></shared-loading-spiner>
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>
